@@ -1,144 +1,57 @@
-
 # Unit Conversion API
 
 ## Overview
 
-Unit Conversion API is an ASP.NET Core Web API that allows users to convert values between different units of measurement.
+This project is an ASP.NET Core Web API that converts values between different units of measurement.
 
-Currently supported conversion categories:
+Supported conversion categories:
 
 * Length
 * Temperature
-* Weight / Mass
-
-The application is designed using a layered architecture and follows clean coding practices to support future scalability and maintainability.
-
----
+* Weight
 
 ## Technologies Used
 
-* ASP.NET Core 8 Web API
+* ASP.NET Core Web API
 * C#
-* Swagger / OpenAPI
-* Dependency Injection
-* xUnit (Unit Testing)
+* Swagger
 
----
+## Running the Project
 
-## Project Structure
+### Prerequisites
 
-```text
-UnitConversionAPI
-│
-├── Controllers
-├── Interfaces
-├── Models
-├── Services
-├── Middleware
-├── Tests
-├── Program.cs
-└── README.md
-```
-
----
-
-## Supported Conversions
-
-### Length
-
-* Meter → Feet
-* Feet → Meter
-
-### Temperature
-
-* Celsius → Fahrenheit
-* Fahrenheit → Celsius
-
-### Weight
-
-* Kilogram → Pound
-* Pound → Kilogram
-
----
-
-## API Endpoint
-
-### Convert Units
-
-```http
-POST /api/conversion
-```
-
-### Request
-
-```json
-{
-  "category": "length",
-  "fromUnit": "meter",
-  "toUnit": "feet",
-  "value": 10
-}
-```
-
-### Response
-
-```json
-{
-  "originalValue": 10,
-  "fromUnit": "meter",
-  "toUnit": "feet",
-  "convertedValue": 32.8084
-}
-```
-
----
-
-## Prerequisites
-
-Before running the project, ensure the following software is installed:
-
-* .NET 8 SDK
+* .NET 10 SDK
 * Visual Studio 2022
 
----
+### Steps
 
-## Running the Application
-
-### Clone Repository
+1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/UnitConversionAPI.git
+git clone <repository-url>
 ```
 
-### Navigate to Project
+2. Navigate to the project folder
 
 ```bash
 cd UnitConversionAPI
 ```
 
-### Restore Packages
+3. Restore packages
 
 ```bash
 dotnet restore
 ```
 
-### Build Project
-
-```bash
-dotnet build
-```
-
-### Run Project
+4. Run the application
 
 ```bash
 dotnet run
 ```
 
----
-
 ## Swagger Documentation
 
-After running the application, open:
+After running the application, open the following URL in your browser:
 
 ```text
 https://localhost:<port>/swagger
@@ -150,58 +63,41 @@ Example:
 https://localhost:7031/swagger
 ```
 
-Swagger UI provides interactive API testing and documentation.
+## API Endpoint
 
----
+### Convert Units
 
-## Design Decisions
+**POST** `/api/conversion`
 
-### Service Layer
+### Sample Request
 
-Business logic is separated from controllers using a service layer.
-
-Benefits:
-
-* Better maintainability
-* Easier unit testing
-* Follows Separation of Concerns
-
-### Dependency Injection
-
-Services are registered using ASP.NET Core Dependency Injection container.
-
-Benefits:
-
-* Loose coupling
-* Easier testing
-* Improved scalability
-
-### Future Enhancements
-
-The current implementation uses hardcoded conversion definitions.
-
-Future improvements may include:
-
-* Database-driven unit configuration
-* Additional conversion categories
-* Caching support
-* API versioning
-* Authentication and Authorization
-
----
-
-## Testing
-
-Run tests using:
-
-```bash
-dotnet test
+```json
+{
+  "category": "length",
+  "fromUnit": "meter",
+  "toUnit": "feet",
+  "value": 10
+}
 ```
 
----
+### Sample Response
+
+```json
+{
+  "originalValue": 10,
+  "fromUnit": "meter",
+  "toUnit": "feet",
+  "convertedValue": 32.8084
+}
+```
+
+## Future Improvements
+
+* Add more unit categories
+* Store conversion data in a database
+* Add unit tests
+* Add API versioning
 
 ## Author
 
 Riyazkhan Pathan
-
-Backend Developer
