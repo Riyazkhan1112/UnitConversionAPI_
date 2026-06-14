@@ -1,0 +1,53 @@
+# Build folders
+
+bin/
+obj/
+
+# Visual Studio
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+
+.idea/
+
+# VS Code
+
+.vscode/
+
+# Logs
+
+*.log
+
+# NuGet
+
+packages/
+*.nupkg
+
+# Test Results
+
+TestResults/
+
+# OS Files
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Publish Output
+
+publish/
+
+# Environment Files
+
+.env
+
+# Coverage Reports
+
+coverage/
+*.coverage
+*.coveragexml
