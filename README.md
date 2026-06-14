@@ -28,7 +28,7 @@ Supported conversion categories:
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Riyazkhan1112/UnitConversionAPI_.git)
 ```
 
 2. Navigate to the project folder
