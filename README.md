@@ -147,7 +147,7 @@ https://localhost:<port>/swagger
 Example:
 
 ```text
-https://localhost:7001/swagger
+https://localhost:7031/swagger
 ```
 
 Swagger UI provides interactive API testing and documentation.
